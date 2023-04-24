@@ -1,0 +1,9 @@
+.keyboard {
+  display: flex;
+  justify-content: space-between;
+  //grid-template-columns: repeat(14, 1fr);
+  //grid-gap: 10px 10px;
+  flex-wrap: wrap;
+  gap: 5px;
+  background-color: yellowgreen;
+}

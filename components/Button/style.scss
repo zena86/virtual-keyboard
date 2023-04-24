@@ -1,0 +1,31 @@
+.btn {
+  width: 40px;
+  height: 40px;
+  background-color: #444;
+  color: #fff;
+
+  &.xsm {
+    width: 44px;
+  }
+
+  &.sm {
+    width: 50px;
+  }
+
+  &.medium {
+    width: 86px;
+  }
+
+  &.lg {
+    width: 100px;
+  }
+
+  &.xl {
+    width: 330px;
+  }
+
+  &.dark {
+    background-color: #222;
+  }
+}
+
