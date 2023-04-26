@@ -12,7 +12,7 @@ export class Content {
     const content = document.createElement("div");
     content.className = this.className;
     content.appendChild(
-      new Title("title", "RSS Виртуальная клавиатура").render()
+      new Title("title", "Виртуальная клавиатура").render()
     );
     content.appendChild(new Screen("screen").render());
     content.appendChild(new Keyboard("keyboard").render());

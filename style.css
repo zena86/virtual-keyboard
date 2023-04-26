@@ -1,21 +1,66 @@
 .content {
-  max-width: 715px;
+  padding: 40px;
+  width: 715px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: "ChunkFiveEx", sans-serif;
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  color: #292C6D;
+}
+
+.screen {
+  width: 700px;
+  height: 200px;
+  margin-bottom: 30px;
+  font-size: 22px;
+  font-weight: 900;
+  font-family: "Roboto", sans-serif;
+  color: #292C6D;
+  padding: 15px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  border-radius: 5px;
 }
 
 .keyboard {
+  width: 715px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 5px;
-  background-color: yellowgreen;
+  gap: 7px 5px;
+  margin-bottom: 40px;
+  border: 2px solid black;
+  padding: 7px;
+  border-radius: 5px;
+  background-color: #D1D1D1;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
 .btn {
   width: 40px;
   height: 40px;
-  background-color: #444;
+  background-color: #292C6D;
   color: #fff;
+  font-size: 15px;
+  font-weight: 900;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.5px;
+  box-shadow: 2px 4px 5px #000000;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  border-radius: 5px;
+  border-color: transparent;
+}
+.btn:active {
+  box-shadow: none;
+}
+.btn:hover {
+  background-color: #EC255A;
 }
 .btn.xsm {
   width: 44px;
@@ -24,18 +69,35 @@
   width: 50px;
 }
 .btn.medium {
-  width: 86px;
+  width: 90px;
 }
 .btn.lg {
-  width: 100px;
+  width: 97px;
 }
 .btn.xl {
   width: 330px;
 }
 .btn.dark {
-  background-color: #222;
+  background-color: #161853;
+}
+.btn.dark:hover {
+  background-color: #EC255A;
 }
 
+.description {
+  font-size: 22px;
+  font-weight: 900;
+  font-family: "Roboto", sans-serif;
+  color: #292C6D;
+  margin: 0;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+@font-face {
+  font-family: "ChunkFiveEx";
+  src: url("assets/fonts/ChunkFiveEx.woff"), url("assets/fonts/ChunkFiveEx.woff2"), url("assets/fonts/ChunkFiveEx.ttf"), url("assets/fonts/ChunkFiveEx.eot");
+}
 body {
-  background-color: yellow;
+  background-color: #FBFBFB;
 }

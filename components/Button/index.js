@@ -7,7 +7,7 @@ export class Button {
 
   render() {
     const buttonEl = document.createElement('button');
-    buttonEl.innerText = this.title;
+    buttonEl.innerHTML = this.title;
     buttonEl.id = this.id;
     buttonEl.className = this.className;
     return buttonEl;

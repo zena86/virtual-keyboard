@@ -1,6 +1,19 @@
+
 @import './components/Content/style.scss';
+@import './components/Title/style.scss';
+@import './components/Screen/style.scss';
 @import './components/Keyboard/style.scss';
 @import './components/Button/style.scss';
+@import './components/Description/style.scss';
+
+@font-face {
+	font-family: "ChunkFiveEx";
+	src: url("assets/fonts/ChunkFiveEx.woff"),
+  url("assets/fonts/ChunkFiveEx.woff2"),
+  url("assets/fonts/ChunkFiveEx.ttf"),
+  url("assets/fonts/ChunkFiveEx.eot");
+}
+
 body {
-  background-color: yellow;
+  background-color: #FBFBFB;
 }

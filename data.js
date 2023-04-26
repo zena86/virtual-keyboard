@@ -67,7 +67,7 @@ export const buttons = [
   {
     id: 13,
     title: 'Backspace',
-    className: 'btn medium dark',
+    className: 'btn lg dark',
   },
   {
     id: 14,
@@ -266,7 +266,7 @@ export const buttons = [
   },
   {
     id: 53,
-    title: 'стрелка вверх',
+    title: '&#8593;',
     className: 'btn dark',
   },
   {
@@ -291,7 +291,7 @@ export const buttons = [
   },
   {
     id: 58,
-    title: '&nbsp;',
+    title: '',
     className: 'btn xl dark',
   },
   {
@@ -301,17 +301,17 @@ export const buttons = [
   },
   {
     id: 60,
-    title: 'влево',
+    title: '&#8592;',
     className: 'btn dark',
   },
   {
     id: 61,
-    title: 'вниз',
+    title: '&#8595;',
     className: 'btn dark',
   },
   {
     id: 62,
-    title: 'вправо',
+    title: '&#8594;',
     className: 'btn dark',
   },
   {
