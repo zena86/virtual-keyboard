@@ -5,9 +5,9 @@ export class Description {
   }
 
   render() {
-    const desc = document.createElement('p');
-    desc.className = this.className;
-    desc.innerText = this.text;
-    return desc;
+    const descEl = document.createElement('p');
+    descEl.className = this.className;
+    descEl.innerText = this.text;
+    return descEl;
   }
 }
