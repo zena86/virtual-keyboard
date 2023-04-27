@@ -13,11 +13,13 @@
   border-radius: 5px;
   border-color: transparent;
 }
-.btn:active {
-  box-shadow: none;
-}
 .btn:hover {
   background-color: #EC255A;
+}
+.btn:active, .btn.active {
+  box-shadow: none;
+  background-color: #EC255A;
+  background-color: #9d0e34;
 }
 .btn.xsm {
   width: 44px;
@@ -39,4 +41,8 @@
 }
 .btn.dark:hover {
   background-color: #EC255A;
+}
+.btn.dark:active, .btn.dark.active {
+  box-shadow: none;
+  background-color: #9d0e34;
 }

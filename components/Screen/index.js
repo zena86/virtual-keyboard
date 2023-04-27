@@ -9,11 +9,12 @@ export class Screen {
     this.screenEl.className = this.className;
     this.screenEl.setAttribute('rows', 5);
     this.screenEl.setAttribute('cols', 50);
-    this.screenEl.addEventListener('keydown', e => {
-      if(e.code !== "Delete") {
-        e.stopPropagation();
-      }
-    });
+    //this.screenEl.addEventListener('keydown', e => {
+      // if(e.code !== "Delete") {
+      //   e.stopPropagation();
+      // }
+
+    //});
     return this.screenEl;
   }
 

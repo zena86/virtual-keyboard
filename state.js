@@ -1,6 +1,7 @@
 export const state = {
-  code: 'init',
-  key: 'init',
+  //code: 'init',
+  //key: 'init',
+  lastKey: null,
   isUppercase: false,
   lang: 'en',
 

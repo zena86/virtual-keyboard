@@ -13,12 +13,17 @@
   border-radius: 5px;
   border-color: transparent;
 
-  &:active {
-    box-shadow: none;
-  }
-
   &:hover {
     background-color: #EC255A;
+  }
+
+  &:active,
+  &.active {
+    box-shadow: none;
+    background-color: #EC255A;
+    background-color: darken(#EC255A, 20%);
+    //border-radius: 44px;
+    //background-color: #EC255A;
   }
 
   &.xsm {
@@ -46,6 +51,14 @@
 
     &:hover {
       background-color: #EC255A;
+    }
+
+    &:active,
+    &.active {
+      box-shadow: none;
+      //border-radius: 44px;
+      background-color: darken(#EC255A, 20%);
+      //background-color: #EC255A;
     }
   }
 }

@@ -2,7 +2,7 @@ import { Title } from "./../Title/index.js";
 import { Screen } from "./../Screen/index.js";
 import { Keyboard } from "./../Keyboard/index.js";
 import { Description } from "./../Description/index.js";
-import { state } from "../../state.js";
+// import { state } from "../../state.js";
 
 export class Content {
   constructor(className) {
@@ -21,13 +21,6 @@ export class Content {
 
 
     const keyboardPlaceholderEl = document.createElement("div");
-
-    state.subscribe('isUppercase', () => {
-      console.log('isUppercase update');
-      keyboardPlaceholderEl.innerHTML = '';
-      keyboardPlaceholderEl.appendChild(new Keyboard("keyboard", screen).render());
-    });
-
     keyboardPlaceholderEl.appendChild(new Keyboard("keyboard", screen).render());
 
     contentEl.appendChild(keyboardPlaceholderEl);
