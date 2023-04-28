@@ -13,6 +13,14 @@ export class Button {
 
   render() {
     this.buttonEl = document.createElement("button");
+    this.drowBtnTitle();
+    this.buttonEl.id = this.id;
+    this.buttonEl.className = this.className;
+    this.buttonEl.addEventListener("click", this.onMousePress);
+    return this.buttonEl;
+  }
+
+  drowBtnTitle() {
     if (state.lang === "ru") {
       this.buttonEl.innerHTML =
         state.isUppercase && this.isLetter
@@ -24,10 +32,10 @@ export class Button {
           ? this.titleEn.toUpperCase()
           : this.titleEn;
     }
-    this.buttonEl.id = this.id;
-    this.buttonEl.className = this.className;
-    this.buttonEl.addEventListener("click", this.onMousePress);
-    return this.buttonEl;
+  }
+
+  updateLang(){
+    this.drowBtnTitle();
   }
 
   highlight() {
@@ -47,22 +55,37 @@ export class Button {
       (idNum >= 30 && idNum <= 40) ||
       (idNum >= 43 && idNum <= 52)
     ) {
-      /*
-      let val = '';
-      if(state.lang === 'ru') {
-        val = buttons.filter((el) => el.id === id)[0].titleRu;
-      } else if(state.lang === 'en') {
-        val = buttons.filter((el) => el.id === id)[0].titleEn;
-      }
-      this.screen.displayСharacter(val);
-      */
       const keyCode = buttons.filter((el) => el.id === id)[0].keyCode;
       state.setProperty("lastKey", {
-        //code: e.code,
-        //key: e.key,
         keyCode: keyCode,
         isVirtual: true,
       });
+    }
+  }
+
+  onCtrlPress() {
+    state.isCtrlPress = true;
+    if(state.isAltPress) {
+      this.changeLang();
+    }
+  }
+
+  onAltPress() {
+    state.isAltPress = true;
+    if(state.isCtrlPress) {
+      this.changeLang();
+    }
+  }
+
+  changeLang() {
+    state.isCtrlPress = false;
+    state.isAltPress = false;
+    if(state.lang === 'en') {
+      state.setProperty('lang', 'ru');
+      localStorage.setItem("lang", state.lang);
+    }else if(state.lang === 'ru') {
+      state.setProperty('lang', 'en');
+      localStorage.setItem("lang", state.lang);
     }
   }
 }

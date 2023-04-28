@@ -1,5 +1,13 @@
 import { Content } from "./components/Content/index.js";
+import { state } from "./state.js";
 
-const root = document.getElementById("root");
+function updateSettingsFromStorage() {
+  if (localStorage.getItem("lang")) {
+    state.lang = localStorage.getItem("lang");
+  }
+}
+updateSettingsFromStorage();
+
+const body = document.querySelector("body");
 const content = new Content("content");
-root.append(content.render());
+body.append(content.render());

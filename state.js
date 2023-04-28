@@ -1,6 +1,6 @@
 export const state = {
-  //code: 'init',
-  //key: 'init',
+  isCtrlPress: false,
+  isAltPress: false,
   lastKey: null,
   isUppercase: false,
   lang: 'en',
