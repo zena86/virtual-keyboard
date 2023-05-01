@@ -5,7 +5,7 @@ export class Title {
   }
 
   render() {
-    const title = document.createElement("h1");
+    const title = document.createElement('h1');
     title.className = this.className;
     title.innerText = this.text;
     return title;

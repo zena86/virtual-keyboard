@@ -1,50 +1,44 @@
-import { Button } from "./../Button/index.js";
-import { buttons } from "./../../data.js";
-import { state } from "./../../state.js";
+import { Button } from './../Button/index.js';
+import { buttons } from './../../data.js';
+import { state } from './../../state.js';
+import {
+  changeStateOnKeyPress,
+  getButtonData,
+  getKeyId,
+  changeStateOnCaps,
+  changeStateOnEnter,
+  onShiftPress,
+  onIndentPress
+} from '../../utils/utils.js';
+import { onAltPress, onCtrlPress } from '../../utils/switchLang.js';
 
 export class Keyboard {
   constructor(className, screen) {
     this.className = className;
     this.screen = screen;
     this.keys = [];
-    state.subscribe("lastKey", () => {
-      this.onKeyPress();
-    });
 
-    state.subscribe("isUppercase", () => {
-      console.log("isUppercase update");
-    });
-
-    state.subscribe("lang", () => {
-      this.keys.forEach((key) => key.updateLang());
-    });
-  }
-
-  onKeyPress() {
-    let valArr = null;
-    let val = "";
-    valArr = buttons.filter((el) => el.keyCode === state.lastKey.keyCode);
-    if (valArr.length === 0) {
-      return;
-    }
-    let keyId = valArr[0].id;
-    if (
-      (keyId >= 0 && keyId <= 12) ||
-      (keyId >= 15 && keyId <= 27) ||
-      (keyId >= 30 && keyId <= 40) ||
-      (keyId >= 43 && keyId <= 52)
-    ) {
-      if (state.lang === "ru") {
-        val = valArr[0].titleRu;
-      } else if (state.lang === "en") {
-        val = valArr[0].titleEn;
+    state.subscribe('isUppercase', () => {
+      this.keys.forEach((key) => key.drowBtnTitle());
+      const keyCaps = this.keys.find((key) => key.id === '29');
+      if (state.isUppercase) {
+        keyCaps.selectBtn();
+      } else {
+        keyCaps.deSelectBtn();
       }
-      this.screen.displayСharacter(val);
-    }
+    });
+
+    state.subscribe('lang', () => {
+      this.keys.forEach((key) => key.drowBtnTitle());
+    });
+
+    state.subscribe('isShiftPress', () => {
+      this.keys.forEach((key) => key.drowBtnTitle());
+    });
   }
 
   render() {
-    const keyboardEl = document.createElement("div");
+    const keyboardEl = document.createElement('div');
     keyboardEl.className = this.className;
     this.keys.length = 0;
     buttons.forEach((btn) => {
@@ -53,7 +47,9 @@ export class Keyboard {
         btn.className,
         btn.titleRu,
         btn.titleEn,
-        btn.isLetter
+        btn.isLetter,
+        btn.withShiftRu,
+        btn.withShiftEn
       );
       this.keys.push(button);
       let btnEl = button.render();
@@ -64,92 +60,72 @@ export class Keyboard {
     return keyboardEl;
   }
 
-  getKeyId(e) {
-    const buttonData = buttons.filter((x) => x.keyCode === e.keyCode);
-    if (buttonData && buttonData.length === 1) {
-      return buttonData[0].id;
-    } else if (e.code === "ShiftLeft") {
-      return "42";
-    } else if (e.code === "ShiftRight") {
-      return "54";
-    } else if (e.code === "ControlLeft") {
-      return "55";
-    } else if (e.code === "ControlRight") {
-      return "63";
-    } else if (e.code === "AltLeft") {
-      return "57";
-    } else if (e.code === "AltRight") {
-      return "59";
-    }
-  }
-
   handleKeyDown() {
     const keyDownHandle = (e) => {
       e.preventDefault();
-      state.setProperty("lastKey", {
-        code: e.code,
-        key: e.key,
-        keyCode: e.keyCode,
-        isVirtual: false,
-      });
+      changeStateOnKeyPress(e);
 
-      const keyId = this.getKeyId(e);
+      const buttonData = getButtonData(e, buttons);
+      const keyId = getKeyId(e, buttonData);
       let button = this.keys.find((x) => x.id === keyId);
       if (button) {
         button.highlight();
+      } else {
+        return;
       }
-
-      //Change language
-      if (button.id === "55") {
-        button.onCtrlPress();
-      } else if (button.id === "57") {
-        button.onAltPress();
-      }
-
-      // const prevUppecaseState = state.isUppercase;
-      // const currUppecaseState = e.getModifierState("CapsLock");
-      // if (currUppecaseState !== prevUppecaseState) {
-      //   console.log("change caps");
-      //   this.screen.addEmpty();
-      //   state.setProperty("isUppercase", currUppecaseState);
-      // }
-
-      /*
-      if (state.code === "Backspace") {
-        this.screen.deleteLastСharacter();
-      } else if (state.code === "Tab") {
+      if (button.id === '55' || button.id === '59') {
+        onCtrlPress();
+      } else if (button.id === '57' || button.id === '63') {
+        onAltPress();
+      } else if (button.id === '13') {
+        this.screen.removeCharBeforeCursor();
+      } else if (button.id === '14') {
         this.screen.addTab();
-      } else if (
-        (e.keyCode >= 48 && e.keyCode <= 57) ||
-        (e.keyCode >= 186 && e.keyCode <= 192) ||
-        (e.keyCode >= 219 && e.keyCode <= 222) ||
-        (e.keyCode >= 65 && e.keyCode <= 90)
-      ) {
-        this.screen.displayСharacter(e.key);
+      } else if (button.id === '28') {
+        this.screen.removeCharAfterCursor();
+      } else if (button.id === '29') {
+        changeStateOnCaps();
+      } else if (button.id === '41') {
+        changeStateOnEnter();
+      } else if (button.id === '42' || button.id === '54') {
+        onShiftPress();
+      } else if (button.id === '58') {
+        onIndentPress();
+      } else if (button.id === '60') {
+        this.screen.toLeft();
+      } else if (button.id === '61') {
+        this.screen.toDown();
+      } else if (button.id === '62') {
+        this.screen.toRight();
+      } else if (button.id === '53') {
+        this.screen.toUp();
       }
-      */
       e.stopPropagation();
     };
 
-    document.removeEventListener("keydown", keyDownHandle);
-    document.addEventListener("keydown", keyDownHandle);
+    document.removeEventListener('keydown', keyDownHandle);
+    document.addEventListener('keydown', keyDownHandle);
   }
 
   handleKeyUp() {
     const keyUpHandle = (e) => {
-      const keyId = this.getKeyId(e);
-
+      const buttonData = getButtonData(e, buttons);
+      const keyId = getKeyId(e, buttonData);
       let button = this.keys.find((x) => x.id === keyId);
       if (button) {
         button.deHighlight();
       }
-      //Change lang
-      state.isCtrlPress = false;
-      state.isAltPress = false;
+      if (e.key === 'Control') {
+        state.isCtrlPress = false;
+      }
+      if (e.key === 'Alt') {
+        state.isAltPress = false;
+      }
+      if (e.key === 'Shift') {
+        state.setProperty('isShiftPress', false);
+      }
     };
-    document.removeEventListener("keyup", keyUpHandle);
-    document.addEventListener("keyup", keyUpHandle);
+    document.removeEventListener('keyup', keyUpHandle);
+    document.addEventListener('keyup', keyUpHandle);
   }
 }
-
-

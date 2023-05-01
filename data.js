@@ -6,6 +6,7 @@ export const buttons = [
     titleEn: '`',
     className: 'btn',
     isLetter: true,
+    withShiftEn: '~'
   },
   {
     id: '1',
@@ -14,6 +15,8 @@ export const buttons = [
     titleEn: '1',
     className: 'btn',
     isLetter: false,
+    withShiftRu: '!',
+    withShiftEn: '!'
   },
   {
     id: '2',
@@ -22,6 +25,8 @@ export const buttons = [
     titleEn: '2',
     className: 'btn',
     isLetter: false,
+    withShiftRu: '"',
+    withShiftEn: '@'
   },
   {
     id: '3',
@@ -30,6 +35,8 @@ export const buttons = [
     titleEn: '3',
     className: 'btn',
     isLetter: false,
+    withShiftRu: '№',
+    withShiftEn: '#'
   },
   {
     id: '4',
@@ -38,6 +45,8 @@ export const buttons = [
     titleEn: '4',
     className: 'btn',
     isLetter: false,
+    withShiftRu: ';',
+    withShiftEn: '$'
   },
   {
     id: '5',
@@ -46,6 +55,8 @@ export const buttons = [
     titleEn: '5',
     className: 'btn',
     isLetter: false,
+    withShiftRu: '%',
+    withShiftEn: '%'
   },
   {
     id: '6',
@@ -54,6 +65,8 @@ export const buttons = [
     titleEn: '6',
     className: 'btn',
     isLetter: false,
+    withShiftRu: ':',
+    withShiftEn: '^'
   },
   {
     id: '7',
@@ -62,6 +75,8 @@ export const buttons = [
     titleEn: '7',
     className: 'btn',
     isLetter: false,
+    withShiftRu: '?',
+    withShiftEn: '&'
   },
   {
     id: '8',
@@ -70,6 +85,8 @@ export const buttons = [
     titleEn: '8',
     className: 'btn',
     isLetter: false,
+    withShiftRu: '*',
+    withShiftEn: '*'
   },
   {
     id: '9',
@@ -78,6 +95,8 @@ export const buttons = [
     titleEn: '9',
     className: 'btn',
     isLetter: false,
+    withShiftRu: '(',
+    withShiftEn: '('
   },
   {
     id: '10',
@@ -86,6 +105,8 @@ export const buttons = [
     titleEn: '0',
     className: 'btn',
     isLetter: false,
+    withShiftRu: ')',
+    withShiftEn: ')'
   },
   {
     id: '11',
@@ -94,6 +115,8 @@ export const buttons = [
     titleEn: '-',
     className: 'btn',
     isLetter: false,
+    withShiftRu: '_',
+    withShiftEn: '_'
   },
   {
     id: '12',
@@ -102,6 +125,8 @@ export const buttons = [
     titleEn: '=',
     className: 'btn',
     isLetter: false,
+    withShiftRu: '+',
+    withShiftEn: '+'
   },
   {
     id: '13',
@@ -109,7 +134,7 @@ export const buttons = [
     titleRu: 'Backspace',
     titleEn: 'Backspace',
     className: 'btn lg dark',
-    isLetter: false,
+    isLetter: false
   },
   {
     id: '14',
@@ -117,7 +142,7 @@ export const buttons = [
     titleRu: 'Tab',
     titleEn: 'Tab',
     className: 'btn sm dark',
-    isLetter: false,
+    isLetter: false
   },
   {
     id: '15',
@@ -125,7 +150,7 @@ export const buttons = [
     titleRu: 'й',
     titleEn: 'q',
     className: 'btn',
-    isLetter: true,
+    isLetter: true
   },
   {
     id: '16',
@@ -133,7 +158,7 @@ export const buttons = [
     titleRu: 'ц',
     titleEn: 'w',
     className: 'btn',
-    isLetter: true,
+    isLetter: true
   },
   {
     id: '17',
@@ -141,7 +166,7 @@ export const buttons = [
     titleRu: 'у',
     titleEn: 'e',
     className: 'btn',
-    isLetter: true,
+    isLetter: true
   },
   {
     id: '18',
@@ -149,7 +174,7 @@ export const buttons = [
     titleRu: 'к',
     titleEn: 'r',
     className: 'btn',
-    isLetter: true,
+    isLetter: true
   },
   {
     id: '19',
@@ -157,7 +182,7 @@ export const buttons = [
     titleRu: 'е',
     titleEn: 't',
     className: 'btn',
-    isLetter: true,
+    isLetter: true
   },
   {
     id: '20',
@@ -165,7 +190,7 @@ export const buttons = [
     titleRu: 'н',
     titleEn: 'y',
     className: 'btn',
-    isLetter: true,
+    isLetter: true
   },
   {
     id: '21',
@@ -173,7 +198,7 @@ export const buttons = [
     titleRu: 'г',
     titleEn: 'u',
     className: 'btn',
-    isLetter: true,
+    isLetter: true
   },
   {
     id: '22',
@@ -181,7 +206,7 @@ export const buttons = [
     titleRu: 'ш',
     titleEn: 'i',
     className: 'btn',
-    isLetter: true,
+    isLetter: true
   },
   {
     id: '23',
@@ -189,7 +214,7 @@ export const buttons = [
     titleRu: 'щ',
     titleEn: 'o',
     className: 'btn',
-    isLetter: true,
+    isLetter: true
   },
   {
     id: '24',
@@ -197,7 +222,7 @@ export const buttons = [
     titleRu: 'з',
     titleEn: 'p',
     className: 'btn',
-    isLetter: true,
+    isLetter: true
   },
   {
     id: '25',
@@ -206,6 +231,7 @@ export const buttons = [
     titleEn: '[',
     className: 'btn',
     isLetter: true,
+    withShiftEn: '{'
   },
   {
     id: '26',
@@ -214,6 +240,7 @@ export const buttons = [
     titleEn: ']',
     className: 'btn',
     isLetter: true,
+    withShiftEn: '}'
   },
   {
     id: '27',
@@ -222,6 +249,7 @@ export const buttons = [
     titleEn: '\\',
     className: 'btn',
     isLetter: false,
+    withShiftEn: '|'
   },
   {
     id: '28',
@@ -229,7 +257,7 @@ export const buttons = [
     titleRu: 'Del',
     titleEn: 'Del',
     className: 'btn xsm dark',
-    isLetter: false,
+    isLetter: false
   },
   {
     id: '29',
@@ -237,7 +265,7 @@ export const buttons = [
     titleRu: 'Caps Lock',
     titleEn: 'Caps Lock',
     className: 'btn lg dark',
-    isLetter: false,
+    isLetter: false
   },
   {
     id: '30',
@@ -245,7 +273,7 @@ export const buttons = [
     titleRu: 'ф',
     titleEn: 'a',
     className: 'btn',
-    isLetter: true,
+    isLetter: true
   },
   {
     id: '31',
@@ -253,7 +281,7 @@ export const buttons = [
     titleRu: 'ы',
     titleEn: 's',
     className: 'btn',
-    isLetter: true,
+    isLetter: true
   },
   {
     id: '32',
@@ -261,7 +289,7 @@ export const buttons = [
     titleRu: 'в',
     titleEn: 'd',
     className: 'btn',
-    isLetter: true,
+    isLetter: true
   },
   {
     id: '33',
@@ -269,7 +297,7 @@ export const buttons = [
     titleRu: 'а',
     titleEn: 'f',
     className: 'btn',
-    isLetter: true,
+    isLetter: true
   },
   {
     id: '34',
@@ -277,7 +305,7 @@ export const buttons = [
     titleRu: 'п',
     titleEn: 'g',
     className: 'btn',
-    isLetter: true,
+    isLetter: true
   },
   {
     id: '35',
@@ -285,7 +313,7 @@ export const buttons = [
     titleRu: 'р',
     titleEn: 'h',
     className: 'btn',
-    isLetter: true,
+    isLetter: true
   },
   {
     id: '36',
@@ -293,7 +321,7 @@ export const buttons = [
     titleRu: 'о',
     titleEn: 'j',
     className: 'btn',
-    isLetter: true,
+    isLetter: true
   },
   {
     id: '37',
@@ -301,7 +329,7 @@ export const buttons = [
     titleRu: 'л',
     titleEn: 'k',
     className: 'btn',
-    isLetter: true,
+    isLetter: true
   },
   {
     id: '38',
@@ -309,7 +337,7 @@ export const buttons = [
     titleRu: 'д',
     titleEn: 'l',
     className: 'btn',
-    isLetter: true,
+    isLetter: true
   },
   {
     id: '39',
@@ -318,6 +346,7 @@ export const buttons = [
     titleEn: ';',
     className: 'btn',
     isLetter: true,
+    withShiftEn: ':'
   },
   {
     id: '40',
@@ -326,6 +355,7 @@ export const buttons = [
     titleEn: '\'',
     className: 'btn',
     isLetter: true,
+    withShiftEn: '"'
   },
   {
     id: '41',
@@ -333,7 +363,7 @@ export const buttons = [
     titleRu: 'Enter',
     titleEn: 'Enter',
     className: 'btn medium dark',
-    isLetter: false,
+    isLetter: false
   },
   {
     id: '42',
@@ -341,7 +371,7 @@ export const buttons = [
     titleRu: 'Shift',
     titleEn: 'Shift',
     className: 'btn lg dark',
-    isLetter: false,
+    isLetter: false
   },
   {
     id: '43',
@@ -349,7 +379,7 @@ export const buttons = [
     titleRu: 'я',
     titleEn: 'z',
     className: 'btn',
-    isLetter: true,
+    isLetter: true
   },
   {
     id: '44',
@@ -357,7 +387,7 @@ export const buttons = [
     titleRu: 'ч',
     titleEn: 'x',
     className: 'btn',
-    isLetter: true,
+    isLetter: true
   },
   {
     id: '45',
@@ -365,7 +395,7 @@ export const buttons = [
     titleRu: 'с',
     titleEn: 'c',
     className: 'btn',
-    isLetter: true,
+    isLetter: true
   },
   {
     id: '46',
@@ -373,7 +403,7 @@ export const buttons = [
     titleRu: 'м',
     titleEn: 'v',
     className: 'btn',
-    isLetter: true,
+    isLetter: true
   },
   {
     id: '47',
@@ -381,14 +411,14 @@ export const buttons = [
     titleRu: 'и',
     titleEn: 'b',
     className: 'btn',
-    isLetter: true,
+    isLetter: true
   },
   {
     id: '48',
     keyCode: 78,
     titleRu: 'т',
     titleEn: 'n',
-    className: 'btn',
+    className: 'btn'
   },
   {
     id: '49',
@@ -396,7 +426,7 @@ export const buttons = [
     titleRu: 'ь',
     titleEn: 'm',
     className: 'btn',
-    isLetter: true,
+    isLetter: true
   },
   {
     id: '50',
@@ -405,6 +435,7 @@ export const buttons = [
     titleEn: ',',
     className: 'btn',
     isLetter: true,
+    withShiftEn: '<'
   },
   {
     id: '51',
@@ -413,6 +444,7 @@ export const buttons = [
     titleEn: '.',
     className: 'btn',
     isLetter: true,
+    withShiftEn: '>'
   },
   {
     id: '52',
@@ -421,6 +453,8 @@ export const buttons = [
     titleEn: '/',
     className: 'btn',
     isLetter: false,
+    withShiftRu: ',',
+    withShiftEn: '?'
   },
   {
     id: '53',
@@ -428,7 +462,7 @@ export const buttons = [
     titleRu: '&#8593;',
     titleEn: '&#8593;',
     className: 'btn dark',
-    isLetter: false,
+    isLetter: false
   },
   {
     id: '54',
@@ -436,7 +470,7 @@ export const buttons = [
     titleRu: 'Shift',
     titleEn: 'Shift',
     className: 'btn medium dark',
-    isLetter: false,
+    isLetter: false
   },
   {
     id: '55',
@@ -444,7 +478,7 @@ export const buttons = [
     titleRu: 'Ctrl',
     titleEn: 'Ctrl',
     className: 'btn dark',
-    isLetter: false,
+    isLetter: false
   },
   {
     id: '56',
@@ -452,7 +486,7 @@ export const buttons = [
     titleRu: 'Win',
     titleEn: 'Win',
     className: 'btn dark',
-    isLetter: false,
+    isLetter: false
   },
   {
     id: '57',
@@ -460,7 +494,7 @@ export const buttons = [
     titleRu: 'Alt',
     titleEn: 'Alt',
     className: 'btn dark',
-    isLetter: false,
+    isLetter: false
   },
   {
     id: '58',
@@ -468,7 +502,7 @@ export const buttons = [
     titleRu: '',
     titleEn: '',
     className: 'btn xl dark',
-    isLetter: false,
+    isLetter: false
   },
   {
     id: '59',
@@ -476,7 +510,7 @@ export const buttons = [
     titleRu: 'Alt',
     titleEn: 'Alt',
     className: 'btn dark',
-    isLetter: false,
+    isLetter: false
   },
   {
     id: '60',
@@ -484,7 +518,7 @@ export const buttons = [
     titleRu: '&#8592;',
     titleEn: '&#8592;',
     className: 'btn dark',
-    isLetter: false,
+    isLetter: false
   },
   {
     id: '61',
@@ -492,7 +526,7 @@ export const buttons = [
     titleRu: '&#8595;',
     titleEn: '&#8595;',
     className: 'btn dark',
-    isLetter: false,
+    isLetter: false
   },
   {
     id: '62',
@@ -500,7 +534,7 @@ export const buttons = [
     titleRu: '&#8594;',
     titleEn: '&#8594;',
     className: 'btn dark',
-    isLetter: false,
+    isLetter: false
   },
   {
     id: '63',
@@ -508,6 +542,6 @@ export const buttons = [
     titleRu: 'Ctrl',
     titleEn: 'Ctrl',
     className: 'btn dark',
-    isLetter: false,
-  },
-]
+    isLetter: false
+  }
+];

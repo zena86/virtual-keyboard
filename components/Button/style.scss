@@ -1,4 +1,6 @@
 .btn {
+  outline: none;
+  border: none;
   width: 40px;
   height: 40px;
   background-color: #292C6D;
@@ -24,6 +26,11 @@
     background-color: darken(#EC255A, 20%);
     //border-radius: 44px;
     //background-color: #EC255A;
+  }
+
+  &.selected {
+    background-color: #EC255A;
+    border-radius: 44px;
   }
 
   &.xsm {
@@ -59,6 +66,15 @@
       //border-radius: 44px;
       background-color: darken(#EC255A, 20%);
       //background-color: #EC255A;
+    }
+
+    &.selected {
+      background-color: #EC255A;
+      border-radius: 44px;
+
+      &:hover {
+        background-color: darken(#EC255A, 20%);
+      }
     }
   }
 }

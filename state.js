@@ -1,8 +1,8 @@
 export const state = {
   isCtrlPress: false,
   isAltPress: false,
+  isShiftPress: false,
   lastKey: null,
-  isUppercase: false,
   lang: 'en',
 
   subscribe: (propertyName, callback) => {
@@ -12,7 +12,7 @@ export const state = {
   setProperty: (propertyName, value) => {
     state[propertyName] = value;
     state.subscribeList
-    .filter((item) => item.propertyName === propertyName)
-    .forEach((item) => { item.callback(); });
-  },
-}
+      .filter((item) => item.propertyName === propertyName)
+      .forEach((item) => { item.callback(); });
+  }
+};

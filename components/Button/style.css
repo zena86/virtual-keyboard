@@ -1,4 +1,6 @@
 .btn {
+  outline: none;
+  border: none;
   width: 40px;
   height: 40px;
   background-color: #292C6D;
@@ -20,6 +22,10 @@
   box-shadow: none;
   background-color: #EC255A;
   background-color: #9d0e34;
+}
+.btn.selected {
+  background-color: #EC255A;
+  border-radius: 44px;
 }
 .btn.xsm {
   width: 44px;
@@ -44,5 +50,12 @@
 }
 .btn.dark:active, .btn.dark.active {
   box-shadow: none;
+  background-color: #9d0e34;
+}
+.btn.dark.selected {
+  background-color: #EC255A;
+  border-radius: 44px;
+}
+.btn.dark.selected:hover {
   background-color: #9d0e34;
 }
