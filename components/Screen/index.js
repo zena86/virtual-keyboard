@@ -1,4 +1,4 @@
-import { state } from './../../state.js';
+import { state } from './../state.js';
 import { getCharacter } from '../../utils/utils.js';
 
 export class Screen {
