@@ -1,0 +1,13 @@
+.keyboard {
+  width: 715px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 7px 5px;
+  margin-bottom: 40px;
+  border: 2px solid black;
+  padding: 7px;
+  border-radius: 5px;
+  background-color: #D1D1D1;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}

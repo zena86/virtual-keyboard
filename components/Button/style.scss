@@ -1,0 +1,77 @@
+.btn {
+  outline: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  background-color: #292C6D;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 900;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.5px;
+  box-shadow: 2px 4px 5px #000000;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  border-radius: 5px;
+  border-color: transparent;
+
+  &:hover {
+    background-color: #EC255A;
+  }
+
+  &:active,
+  &.active {
+    box-shadow: none;
+    background-color: #EC255A;
+    background-color: darken(#EC255A, 20%);
+  }
+
+  &.selected {
+    background-color: #EC255A;
+    border-radius: 44px;
+  }
+
+  &.xsm {
+    width: 44px;
+  }
+
+  &.sm {
+    width: 50px;
+  }
+
+  &.medium {
+    width: 90px;
+  }
+
+  &.lg {
+    width: 97px;
+  }
+
+  &.xl {
+    width: 330px;
+  }
+
+  &.dark {
+    background-color: #161853;
+
+    &:hover {
+      background-color: #EC255A;
+    }
+
+    &:active,
+    &.active {
+      box-shadow: none;
+      background-color: darken(#EC255A, 20%);
+    }
+
+    &.selected {
+      background-color: #EC255A;
+      border-radius: 44px;
+
+      &:hover {
+        background-color: darken(#EC255A, 20%);
+      }
+    }
+  }
+}
+
