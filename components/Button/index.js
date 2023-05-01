@@ -45,7 +45,6 @@ export class Button {
   }
 
   drowBtnTitle() {
-    let that = this;
     const isUpper = (state.isShiftPress && !state.isUppercase)
       || (!state.isShiftPress && state.isUppercase);
     if (state.lang === 'ru') {
@@ -55,6 +54,11 @@ export class Button {
       this.buttonEl.innerHTML = isUpper && this.isLetter
         ? this.titleEn.toUpperCase() : this.titleEn;
     }
+  }
+
+  drowBtnTitleWithShift() {
+    let that = this;
+    this.drowBtnTitle();
     this.changeSymbolWithShift(that);
   }
 

@@ -8,17 +8,23 @@ export const getButtonData = (e, btns) => {
 export const getKeyId = (e, buttonData) => {
   if (buttonData && buttonData.length === 1) {
     return buttonData[0].id;
-  } if (e.code === 'ShiftLeft') {
+  }
+  if (e.code === 'ShiftLeft') {
     return '42';
-  } if (e.code === 'ShiftRight') {
+  }
+  if (e.code === 'ShiftRight') {
     return '54';
-  } if (e.code === 'ControlLeft') {
+  }
+  if (e.code === 'ControlLeft') {
     return '55';
-  } if (e.code === 'ControlRight') {
+  }
+  if (e.code === 'ControlRight') {
     return '63';
-  } if (e.code === 'AltLeft') {
+  }
+  if (e.code === 'AltLeft') {
     return '57';
-  } if (e.code === 'AltRight') {
+  }
+  if (e.code === 'AltRight') {
     return '59';
   }
   return '-1';
@@ -29,9 +35,9 @@ export const changeStateOnButtonClick = (e) => {
   const idNum = +id;
   if (
     (idNum >= 0 && idNum <= 12)
-      || (idNum >= 15 && idNum <= 27)
-      || (idNum >= 30 && idNum <= 40)
-      || (idNum >= 43 && idNum <= 52)
+    || (idNum >= 15 && idNum <= 27)
+    || (idNum >= 30 && idNum <= 40)
+    || (idNum >= 43 && idNum <= 52)
   ) {
     const keyCode = buttons.filter((el) => el.id === id)[0].keyCode;
     state.setProperty('lastKey', {
@@ -92,11 +98,40 @@ export const getCharacter = () => {
     return null;
   }
   let keyId = valArr[0].id;
+
+  if (
+    state.lang === 'en'
+    && state.isShiftPress
+    && valArr[0].withShiftEn
+    && (
+      (keyId >= 0 && keyId <= 12)
+      || (keyId >= 24 && keyId <= 27)
+      || (keyId >= 38 && keyId <= 40)
+      || (keyId >= 49 && keyId <= 52)
+    )
+  ) {
+    val = valArr[0].withShiftEn;
+    return val;
+  }
+
+  if (
+    state.lang === 'ru'
+    && state.isShiftPress
+    && valArr[0].withShiftRu
+    && (
+      (keyId >= 0 && keyId <= 12)
+      || keyId === '52'
+    )
+  ) {
+    val = valArr[0].withShiftRu;
+    return val;
+  }
+
   if (
     (keyId >= 0 && keyId <= 12)
-      || (keyId >= 15 && keyId <= 27)
-      || (keyId >= 30 && keyId <= 40)
-      || (keyId >= 43 && keyId <= 52)
+    || (keyId >= 15 && keyId <= 27)
+    || (keyId >= 30 && keyId <= 40)
+    || (keyId >= 43 && keyId <= 52)
   ) {
     if (state.lang === 'ru') {
       val = valArr[0].titleRu;
@@ -105,36 +140,6 @@ export const getCharacter = () => {
     }
     return val;
   }
-
-  // if (state.lang === 'ru') {
-  //   if (
-  //     (keyId >= 15 && keyId <= 27)
-  //     || (keyId >= 30 && keyId <= 40)
-  //     || (keyId >= 43 && keyId <= 51)
-  //   ) {
-  //     val = valArr[0].titleRu;
-  //   } else if ((keyId >= 0 && keyId <= 12) || keyId <= 52) {
-  //     console.log('ru change');
-  //     console.log(state.onShiftPress);
-  //     if (state.onShiftPress) {
-  //       if (valArr[0].withShiftRu) {
-  //         val = valArr[0].withShiftRu;
-  //       }
-  //     }
-  //     val = valArr[0].titleRu;
-  //   }
-  //   return val;
-  // } if (state.lang === 'en') {
-  //   if (
-  //     (keyId >= 0 && keyId <= 12)
-  //     || (keyId >= 15 && keyId <= 24)
-  //     || (keyId >= 30 && keyId <= 38)
-  //     || (keyId >= 43 && keyId <= 49)
-  //   ) {
-  //     val = valArr[0].titleEn;
-  //   }
-  //   return val;
-  // }
 
   return null;
 };

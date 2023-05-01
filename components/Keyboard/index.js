@@ -33,7 +33,7 @@ export class Keyboard {
     });
 
     state.subscribe('isShiftPress', () => {
-      this.keys.forEach((key) => key.drowBtnTitle());
+      this.keys.forEach((key) => key.drowBtnTitleWithShift());
     });
   }
 
@@ -116,10 +116,10 @@ export class Keyboard {
         button.deHighlight();
       }
       if (e.key === 'Control') {
-        state.isCtrlPress = false;
+        state.setProperty('isCtrlPress', false);
       }
       if (e.key === 'Alt') {
-        state.isAltPress = false;
+        state.setProperty('isAltPress', false);
       }
       if (e.key === 'Shift') {
         state.setProperty('isShiftPress', false);

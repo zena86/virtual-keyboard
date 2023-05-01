@@ -24,8 +24,6 @@
     box-shadow: none;
     background-color: #EC255A;
     background-color: darken(#EC255A, 20%);
-    //border-radius: 44px;
-    //background-color: #EC255A;
   }
 
   &.selected {
@@ -63,9 +61,7 @@
     &:active,
     &.active {
       box-shadow: none;
-      //border-radius: 44px;
       background-color: darken(#EC255A, 20%);
-      //background-color: #EC255A;
     }
 
     &.selected {

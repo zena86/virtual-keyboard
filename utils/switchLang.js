@@ -13,14 +13,14 @@ export const changeLang = () => {
 };
 
 export const onCtrlPress = () => {
-  state.isCtrlPress = true;
+  state.setProperty('isCtrlPress', true);
   if (state.isAltPress) {
     changeLang();
   }
 };
 
 export const onAltPress = () => {
-  state.isAltPress = true;
+  state.setProperty('isAltPress', true);
   if (state.isCtrlPress) {
     changeLang();
   }
