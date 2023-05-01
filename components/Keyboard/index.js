@@ -1,6 +1,6 @@
 import { Button } from './../Button/index.js';
-import { buttons } from './../data.js';
-import { state } from './../state.js';
+import { buttons } from './data.js';
+import { state } from './state.js';
 import {
   changeStateOnKeyPress,
   getButtonData,
