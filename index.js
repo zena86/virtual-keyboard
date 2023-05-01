@@ -1,5 +1,5 @@
 import { Content } from './components/Content/index.js';
-import { state } from './state.js';
+import { state } from 'https://zena86.github.io/virtual-keyboard/state.js';
 
 function updateSettingsFromStorage() {
   if (localStorage.getItem('lang')) {

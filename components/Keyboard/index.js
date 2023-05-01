@@ -1,6 +1,6 @@
 import { Button } from './../Button/index.js';
-import { buttons } from './data.js';
-import { state } from './state.js';
+import { buttons } from 'https://zena86.github.io/virtual-keyboard/data.js';
+import { state } from 'https://zena86.github.io/virtual-keyboard/state.js';
 import {
   changeStateOnKeyPress,
   getButtonData,
